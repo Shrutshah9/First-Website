@@ -1,3 +1,5 @@
 function sayHello() {
-    alert("Hello! Welcome to Shrut's World");
+    let name = "Shrut";
+
+    alert("Welcome " + name);
 }
