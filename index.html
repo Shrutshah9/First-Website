@@ -1,22 +1,167 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shrut's personal portfolio website. MSc IT student interested in technology and development.">
+    <title>Shrut | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>Hello</h1>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">SHRUT<span>.</span></a>
 
-    <h2>Welcome To Shrut World's</h2>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>I am learning web development.</p>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+                <h1>Hello, I'm <span>Shrut.</span></h1>
+                <h2>MSc IT Student</h2>
 
-    <button onclick="sayHello()">Click Me</button>
+                <p class="hero-description">
+                    Passionate about technology, programming and creating
+                    meaningful digital experiences.
+                </p>
 
-<script src="script.js"></script>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">Explore My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
 
+            <div class="hero-decoration">
+                <div class="circle">
+                    <span>&lt;/&gt;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <p class="section-label">GET TO KNOW ME</p>
+            <h2 class="section-title">About <span>Me</span></h2>
+
+            <div class="about-card">
+                <p>
+                    Hello! I'm Shrut, an MSc IT student with an interest
+                    in technology and the digital world.
+                </p>
+                <p>
+                    I enjoy exploring new technologies, developing my
+                    technical skills and working on creative projects.
+                    This portfolio is a place to showcase my journey,
+                    interests and work.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <p class="section-label">MY ACADEMIC JOURNEY</p>
+            <h2 class="section-title">My <span>Education</span></h2>
+
+            <div class="info-card">
+                <div class="card-icon">🎓</div>
+                <h3>Master of Science in Information Technology</h3>
+                <p class="highlight">MSc IT</p>
+                <p>Currently pursuing</p>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <p class="section-label">WHAT I'M INTERESTED IN</p>
+            <h2 class="section-title">My <span>Skills</span></h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span>🌐</span>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS and JavaScript</p>
+                </div>
+
+                <div class="skill-card">
+                    <span>🐍</span>
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                </div>
+
+                <div class="skill-card">
+                    <span>💻</span>
+                    <h3>Tools</h3>
+                    <p>GitHub and VS Code</p>
+                </div>
+
+                <div class="skill-card">
+                    <span>🔐</span>
+                    <h3>Technology</h3>
+                    <p>Exploring cybersecurity</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <p class="section-label">SOME OF MY WORK</p>
+            <h2 class="section-title">My <span>Projects</span></h2>
+
+            <div class="project-card">
+                <div class="project-top">
+                    <span class="project-icon">💻</span>
+                    <span class="project-number">01</span>
+                </div>
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A personal website created to showcase my introduction,
+                    interests, skills and projects.
+                </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/Shrutshah9/First-Website"
+                   target="_blank" rel="noopener noreferrer">
+                    View on GitHub ↗
+                </a>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <p class="section-label">LET'S CONNECT</p>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+
+            <p class="contact-description">
+                Interested in connecting or discussing technology?
+                Feel free to reach out.
+            </p>
+
+            <a href="mailto:your-email@example.com" class="btn primary-btn">
+                Email Me
+            </a>
+
+            <div class="social-links">
+                <a href="https://github.com/Shrutshah9"
+                   target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Shrut. All rights reserved.</p>
+        <p>Designed with care.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<!https://www.google.com/search?q=ai+mode&rlz=1C1UEAD_en-GBIN1074IN1074&oq=ai+mode&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIHCAQQABiABDIKCAUQABixAxiABDIHCAYQABiABDIHCAcQABiABDIKCAgQABixAxiABDIHCAkQABiPAtIBCDI2MTFqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&mstk=AUtExfAhO9vQKLFqzHCk74bP9znCfqpzi0Pq-zzL_F-H76YbBPO3u937TRqY5rQgLlU-kdk1I2u6H9AsHZ8ki2_h5WOXKtPkNrIi1HiaJjNGamBW7iSJf8qQP2FC654jGfG-O05Fyd1ksGBsO6cJsTNtixyh-1St5c0K5-65yk72_nZs-tP88wz9gxF7hL1s5Z-Cec7jHWdiM2PpD_HXMJGSqa5B3jGUVTRdojB24IBXTC7_BhP9x2De2HkjY1PYUZ0sNY0js15Ocfs88lAx24UcUoOP8KYY59ksbEEDmOzlcEuinoiTU1LcHWT71aXnjo36jtttLhamefOJCA&csuir=1&aioh=3&lns_mode=cvst&udm=50#aof=1 >
