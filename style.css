@@ -342,3 +342,26 @@ body {
         font-size: 32px;
     }
 }
+
+/* Back to top button */
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7651dc, #4e7fe8);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 99;
+    box-shadow: 0 5px 20px #7651dc55;
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+}
