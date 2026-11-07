@@ -2,18 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Shrut">
+    <meta name="theme-color" content="#0b0b16">
+    <meta name="description" content="Shrut's personal portfolio website. MSc IT student interested in technology and development.">
     <meta property="og:title" content="Shrut | Personal Portfolio">
     <meta property="og:description" content="Explore Shrut's portfolio, education, interests and projects.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shrutshah9.github.io/First-Website/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shrut's personal portfolio website. MSc IT student interested in technology and development.">
     <title>Shrut | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script>
+        // Apply saved theme before page paints (prevents a flash)
+        try {
+            var t = localStorage.getItem("theme");
+            if (!t && window.matchMedia("(prefers-color-scheme: light)").matches) t = "light";
+            if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+    </script>
 </head>
 <body>
 
@@ -21,14 +29,18 @@
         <nav class="navbar">
             <a href="#home" class="logo">SHRUT<span>.</span></a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="themeToggle" class="theme-toggle" type="button"
+                        aria-label="Switch to light theme" title="Toggle theme">🌙</button>
+            </div>
         </nav>
     </header>
 
@@ -37,7 +49,9 @@
             <div class="hero-content">
                 <p class="welcome">WELCOME TO MY PORTFOLIO</p>
                 <h1>Hello, I'm <span>Shrut.</span></h1>
-                <h2>MSc IT Student</h2>
+                <h2 aria-label="MSc IT Student">
+                    <span id="typed" aria-hidden="true">MSc IT Student</span><span class="typed-cursor" aria-hidden="true">|</span>
+                </h2>
 
                 <p class="hero-description">
                     Passionate about technology, programming and creating
@@ -47,6 +61,7 @@
                 <div class="hero-buttons">
                     <a href="#projects" class="btn primary-btn">Explore My Work</a>
                     <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    <a href="resume.pdf" class="btn secondary-btn resume-btn" download="Shrut-Resume.pdf">Download Resume ⬇</a>
                 </div>
             </div>
 
@@ -159,10 +174,10 @@
 
             <div class="social-links">
                 <a href="https://github.com/Shrutshah9"
-                target="_blank" rel="noopener noreferrer"
-                class="btn secondary-btn">
-                Visit My GitHub Profile ↗
-    </a>
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn secondary-btn">
+                    Visit My GitHub Profile ↗
+                </a>
             </div>
         </section>
     </main>
@@ -172,7 +187,7 @@
         <p>Designed with care.</p>
     </footer>
 
-    <button id="backToTop" title="Back to top">↑</button>
-    <script src="script.js"></script>
+    <button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+    <script src="script.js" defer></script>
 </body>
 </html>
